@@ -1,0 +1,16 @@
+Verified on 15 November 2026 on macOS arm64.
+Java 25.0.5, Maven 3.9.9, Temporal CLI 1.10.0 / Server 1.32.2.
+Command: ./run-demo.sh
+Six tests passed. No tests skipped.
+The live crash-and-restart test took 13.06 seconds.
+
+PASS
+Workflow crash-demo-bfe5813e-920f-4985-ab02-156dbb6c1c0e
+Same run 01a1df84-b137-7678-9646-eabe7170a805
+Killed worker process 74533
+Restarted worker process 74548
+Timer fired while the Spring worker was stopped
+Start activity ran once
+Completion activity ran once, in the restarted worker
+Temporal development server remained alive in a separate process
+Normal worker cache settings used

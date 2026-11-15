@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: temporal-crash-demo
+  main:
+    web-application-type: none
+    keep-alive: true
+    banner-mode: off
+  temporal:
+    connection:
+      target: ${TEMPORAL_ADDRESS:127.0.0.1:7233}
+    namespace: default
+    start-workers: true
+    workers:
+      - task-queue: crash-demo
+        workflow-classes:
+          - com.example.temporal.DemoWorkflowImpl
+        activity-beans:
+          - demoActivities
+
+demo:
+  worker-name: manual-worker
+  audit-directory: target/manual-audit
